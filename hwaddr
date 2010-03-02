@@ -1,4 +1,4 @@
-# ZSH function for ~/.zfunc/hwaddr
+#!/bin/zsh
 hwaddr()	{
 	local	x
 	for x in "${@:-eth0}"; do
@@ -7,3 +7,6 @@ hwaddr()	{
 		tr '[a-f]' '[A-Z]'
 	done
 }
+for x in "$@"; do
+	hwaddr "${x}"
+done
