@@ -8,8 +8,8 @@ SUBDIRS	=
 PREFIX	=
 SYSDIR	=${PREFIX}/etc/sysconfig
 NETDIR	=${SYSDIR}/network-scripts
-DEVDIR	=${SYSDIR}/networking/device
-PRODIR	=${SYSDIR}/networking/profile/default
+DEVDIR	=${SYSDIR}/networking/devices
+PRODIR	=${SYSDIR}/networking/profiles/default
 
 INSTALL	=install
 
@@ -42,7 +42,11 @@ $(foreach f,${FILES},$(eval $(call IMPORT_template,${f})))
 define	INSTALL_template
 .PHONY: install-${1}
 install-${1}: ${1}
-	@cmp -s $${NETDIR}/${1} ${1} || ( $${SHELL} -xc "${INSTALL} -Dc -m 0644 ${1} $${NETDIR}/${1}": $${SHELL} -xc "ln -f ${NETDIR}/${1} ${DEVDIR}/${1}"; $${SHELL} -xc "ln -f ${NETDIR}/${1} ${PRODIR}/${1}" )
+	@cmp -s $${NETDIR}/${1} ${1} || (				\
+		$${SHELL} -xc "${INSTALL} -Dc -m 0644 ${1} $${NETDIR}/${1}": \
+		$${SHELL} -xc "ln -f ${NETDIR}/${1} ${DEVDIR}/${1}"; 	\
+		$${SHELL} -xc "ln -f ${NETDIR}/${1} ${PRODIR}/${1}"	\
+	)
 install:: install-${1}
 endef
 

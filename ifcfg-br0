@@ -1,6 +1,4 @@
 # Bridge device
-# HWADDR=00:24:21:21:5A:50
-# UUID=5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03
 BOOTPROTO=dhcp
 DELAY=0
 DEVICE=br0
