@@ -1,5 +1,6 @@
 # Realtek Semiconductor Co., Ltd. RTL8111/8168B PCI Express Gigabit Ethernet controller
 DEVICE=eth0
+# You must localize the HWADDR for every local NIC.  This one is for QUADIMODO
 HWADDR=00:24:21:21:5A:50
 ONBOOT=yes
 #BOOTPROTO=dhcp
