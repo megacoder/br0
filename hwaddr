@@ -1,1 +1,9 @@
-ip link show br0 | awk '/link\/ether/ { print  }'
+# ZSH function for ~/.zfunc/hwaddr
+hwaddr()	{
+	local	x
+	for x in "${@:-eth0}"; do
+		ip link show "${x}"					|
+		awk '/link\/ether/ { print $2 }'			|
+		tr '[a-f]' '[A-Z]'
+	done
+}
