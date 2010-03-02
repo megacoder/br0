@@ -1,0 +1,1 @@
+ip link show br0 | awk '/link\/ether/ { print  }'
