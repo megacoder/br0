@@ -1,0 +1,4 @@
+#!/bin/zsh
+tunctl -t tap0
+brctl addif br0 tap0
+brctl show
