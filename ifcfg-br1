@@ -7,6 +7,6 @@ NM_CONTROLLED=no
 ONBOOT=yes
 PEERDNS=no
 PEERROUTES=yes
-STP=on
+STP=yes
 TYPE=Bridge
 USERCTL=yes
