@@ -43,7 +43,7 @@ define	INSTALL_template
 .PHONY: install-${1}
 install-${1}: ${1}
 	@cmp -s $${NETDIR}/${1} ${1} || (				\
-		$${SHELL} -xc "${INSTALL} -Dc -m 0644 ${1} $${NETDIR}/${1}": \
+		$${SHELL} -xc "${INSTALL} -Dc -m 0644 ${1} $${NETDIR}/${1}"; \
 		$${SHELL} -xc "ln -f ${NETDIR}/${1} ${DEVDIR}/${1}"; 	\
 		$${SHELL} -xc "ln -f ${NETDIR}/${1} ${PRODIR}/${1}"	\
 	)
