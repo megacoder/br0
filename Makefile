@@ -13,7 +13,7 @@ PRODIR	=${SYSDIR}/networking/profiles/default
 
 INSTALL	=install
 
-FILES	=ifcfg-br0 ifcfg-eth0
+FILES	:=$(wildcard ifcfg-*)
 
 all::	${FILES}
 
