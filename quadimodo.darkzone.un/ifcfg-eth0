@@ -1,0 +1,12 @@
+# Realtek
+BOOTPROTO=none
+BRIDGE=br0
+DEVICE=eth0
+HWADDR=00:a1:b0:00:01:53
+IPV6INIT=no
+NAME="eth0"
+NM_CONTROLLED=no
+ONBOOT=yes
+TYPE=Ethernet
+USERCTL=yes
+
