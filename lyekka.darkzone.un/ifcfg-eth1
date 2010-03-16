@@ -1,0 +1,14 @@
+# Please read /usr/share/doc/initscripts-*/sysconfig.txt
+# for the documentation of these parameters.
+DEVICE=eth1
+BOOTPROTO=dhcp
+TYPE=Ethernet
+HWADDR=00:10:4B:74:A4:28
+ONBOOT=yes
+USERCTL=no
+IPV6INIT=no
+NM_CONTROLLED=no
+NAME="System eth1"
+UUID=9c92fad9-6ecb-3e6c-eb4d-8a47c6f50c04
+PEERDNS=no
+PEERROUTES=yes
