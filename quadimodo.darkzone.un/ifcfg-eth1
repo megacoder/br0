@@ -1,7 +1,7 @@
 # VIA Technologies, Inc. VT6120/VT6121/VT6122 Gigabit Ethernet Adapter
 BOOTPROTO=none
 BRIDGE=br1
-DEVICE=eth2
+DEVICE=eth1
 HWADDR=00:24:21:21:5a:50
 IPV6INIT=no
 NAME="eth1"
