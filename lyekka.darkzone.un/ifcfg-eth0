@@ -1,18 +1,12 @@
 # Please read /usr/share/doc/initscripts-*/sysconfig.txt
 # for the documentation of these parameters.
-GATEWAY=192.168.2.1
 DEVICE=eth0
 BOOTPROTO=none
-NETMASK=255.255.255.0
 TYPE=Ethernet
 HWADDR=00:10:5A:1D:D5:C7
-IPADDR=192.168.2.254
 NM_CONTROLLED=no
 IPV6INIT=no
 ONBOOT=yes
 USERCTL=no
-DNS1=127.0.0.1
-DOMAIN=darkzone.un
-PREFIX=24
 NAME="System eth0"
-UUID=5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03
+BRIDGE=br0
