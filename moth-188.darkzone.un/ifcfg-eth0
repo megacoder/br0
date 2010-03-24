@@ -1,0 +1,11 @@
+# Realtek Semiconductor Co., Ltd. RTL-8139/8139C/8139C+
+DEVICE=eth0
+#BOOTPROTO=dhcp
+BOOTPROTO=none
+HWADDR=00:16:3E:61:72:E0
+ONBOOT=yes
+PEERDNS=no
+TYPE=Ethernet
+USERCTL=no
+IPV6INIT=no
+BRIDGE=br0
