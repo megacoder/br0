@@ -1,0 +1,7 @@
+# Broadcom Corporation NetXtreme BCM5754 Gigabit Ethernet PCI Express
+DEVICE=eth0
+#BOOTPROTO=dhcp
+BOOTPROTO=none
+HWADDR=00:19:B9:36:BE:F2
+ONBOOT=yes
+BRIDGE=br0
