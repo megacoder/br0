@@ -13,6 +13,8 @@ PRODIR	=${SYSDIR}/networking/profiles/default
 
 INSTALL	=install
 
+HOST	:=$(shell hostname)
+
 FILES	:=$(wildcard ifcfg-*)
 
 all::	${FILES}
@@ -63,8 +65,10 @@ $(foreach f,${FILES},$(eval $(call UNINSTALL_template,${f})))
 
 # Keep at bottom so we do local stuff first.
 
-# ${TARGETS}::
-#	${MAKE} TARGET=$@ ${SUBDIRS}
+ifneq	(,${SUBDIRS})
+${TARGETS}::
+	${MAKE} TARGET=$@ ${SUBDIRS}
 
-# ${SUBDIRS}::
-#	${MAKE} -C $@ ${TARGET}
+${SUBDIRS}::
+	${MAKE} -C $@ ${TARGET}
+endif
